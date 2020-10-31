@@ -27,7 +27,7 @@ String s = Float.toString(25.0f);
 &nbsp;&nbsp;&nbsp;&nbsp;root.traversePreOrder(action);
 ．．．
 ｝
-</pre><p><br></p><p><br></p><p>其中populateCollectionAction方法为：</p><p>这里实际上 new TraversalAction&lt;TreeNode&lt;String&gt;&gt;() {}；用的时匿名内部类，重写了接口里面的方法来实现了一个接口</p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">private TraversalAction&lt;TreeNode&lt;String&gt;&gt; populateCollectionAction(final Collection&lt;TreeNode&lt;String&gt;&gt; collection) {
+</pre><p><br></p><p><br></p><p>其中populateCollectionAction方法为：</p><p>这里实际上 new TraversalAction&lt;TreeNode&lt;String&gt;&gt;() {}；用的时<span style="background-color: rgb(255, 255, 0);">匿名内部类</span>，重写了接口里面的方法来实现了一个接口</p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">private TraversalAction&lt;TreeNode&lt;String&gt;&gt; populateCollectionAction(final Collection&lt;TreeNode&lt;String&gt;&gt; collection) {
 &nbsp;&nbsp;&nbsp;&nbsp;// Populate input collection while traversing the tree
 &nbsp;&nbsp;&nbsp;&nbsp;return new TraversalAction&lt;TreeNode&lt;String&gt;&gt;() {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@Override
