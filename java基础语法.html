@@ -24,7 +24,8 @@ String s = Float.toString(25.0f);
 	String message = "Tree was incorrectly traversed in a pre ordered manner";
 &nbsp;&nbsp;&nbsp;&nbsp;final Collection&lt;TreeNode&lt;String&gt;&gt; mPreOrderedActual = new ArrayList&lt;&gt;(10);
 &nbsp;&nbsp;&nbsp;&nbsp;TraversalAction&lt;TreeNode&lt;String&gt;&gt; action = populateCollectionAction(mPreOrderedActual);
-&nbsp;&nbsp;&nbsp;&nbsp;root.traversePreOrder(action);
+&nbsp;&nbsp;&nbsp;&nbsp;root.traversePreOrder(action); 　　　　　//这里才是真正的traversePreOrder
+
 ．．．
 ｝
 </pre><p><br></p><p><br></p><p>其中populateCollectionAction方法为：</p><p>这里实际上 new TraversalAction&lt;TreeNode&lt;String&gt;&gt;() {}；用的时<span style="background-color: rgb(255, 255, 0);">匿名内部类</span>，重写了接口里面的方法来实现了一个接口</p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">private TraversalAction&lt;TreeNode&lt;String&gt;&gt; populateCollectionAction(final Collection&lt;TreeNode&lt;String&gt;&gt; collection) {
